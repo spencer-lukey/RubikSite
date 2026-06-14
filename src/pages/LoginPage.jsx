@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginPage() {
 
@@ -43,7 +44,13 @@ function LoginPage() {
                 Password:
                 <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
             </label>
+            <Link to="FIX ME">Forgot password?</Link>
             <button type="submit">Login</button>
+            <p className="link-text">
+                Don't have an account? 
+                <Link to="FIX ME">Sign up</Link>
+                here!
+            </p>
             {error && <p className="form-error-msg">{error}</p>}
         </form>
     </div>
