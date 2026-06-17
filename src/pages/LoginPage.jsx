@@ -25,6 +25,10 @@ function LoginPage() {
         } else if (username != "butt" || password != "butt") {
             setError("Username and password must be 'butt'.");
             
+        // } else if (db_password != password) {
+        //      setError("Incorrect password.");
+        // }
+        
         } else {
             setError(null);
             alert("You did it!");
