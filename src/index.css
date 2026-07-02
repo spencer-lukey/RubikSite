@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    background-color: rgb(165, 165, 165);
+}
+
+#canvas-container {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
+    background-color: antiquewhite;
+    border-radius: 1vh;
+}
