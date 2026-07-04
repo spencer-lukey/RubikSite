@@ -14,7 +14,7 @@ import { useControls } from 'leva'
 // npm install @react-three/drai
 // npm install leva@0.9.34
 
-function AnimationBox() {
+function AnimationBox({ base, height, depth}) {
 
   const boxRef = useRef();
   
@@ -25,7 +25,7 @@ function AnimationBox() {
 
   return (
     <mesh ref={boxRef}>
-      <boxGeometry args={[2, 2, 2]} />
+      <boxGeometry args={[base, height, depth]} />
       <meshStandardMaterial color={0x00bfff} />
     </mesh>
   )
