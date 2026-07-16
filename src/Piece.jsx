@@ -20,7 +20,10 @@ function Piece({ posX, posY, posZ}) {
       <mesh 
         ref={boxRef}
         position={[posX, posY, posZ]}
-        onClick={(event) => (setActive(!isActive))}>
+        onClick={(event) => {
+          console.log(key);
+          setActive(!isActive)
+        }}>
         <boxGeometry args={[0.98, 0.98, 0.98]}/>
         <meshStandardMaterial color={isActive ? 'orange' : 	0x222222} /> 
       </mesh>
