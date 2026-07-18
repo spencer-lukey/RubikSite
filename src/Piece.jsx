@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { OrbitControls, GizmoHelper, GizmoViewcube, GizmoViewport } from '@react-three/drei'
 import { backgroundBlurriness } from 'three/tsl'
 import { useControls } from 'leva'
+import Sticker from './Sticker.jsx'
 
 
 function Piece({ posX, posY, posZ}) {
@@ -15,6 +16,7 @@ function Piece({ posX, posY, posZ}) {
       // Runs repeatedly every frame!
       
     });
+
 
     return (
       <mesh 

@@ -1,12 +1,15 @@
 import Piece from './Piece.jsx'
 import { useState, useEffect, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import Sticker from './Sticker.jsx';
 
 function Cube() {
     // Create 27 piece objects in a cube shape of 3x3x3
+    const pieceReferences = [];
     const allPiecesGroupRef = useRef();
     var gridPositions = [];
     var pieces = [];
+    var id = 0;
     var posY;
     var posX;
     var posZ;
@@ -24,7 +27,13 @@ function Cube() {
     return (
         <group name='allPieces' ref={allPiecesGroupRef}>
             {gridPositions.map((position, idx) => (
-                <Piece key={`box-${idx}`} posX={position[0]} posY={position[1]} posZ={position[2]} />
+                // Create new group of pieces with stickers:
+                <group name={`piece-${i}`} ref={AGHHHHHHH}>
+                    <Piece key={`box-${idx}`} posX={position[0]} posY={position[1]} posZ={position[2]} />
+                    {position[0] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
+                    {position[1] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
+                    {position[2] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
+                </group>
             ))}
         </group>
         
