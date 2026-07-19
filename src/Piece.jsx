@@ -10,7 +10,10 @@ function Piece({ posX, posY, posZ}) {
 
     // Returns a cube given inputs on position
     const boxRef = useRef();
-    const [isActive, setActive] = useState(false);
+
+    // Determines whether or not we should group and move piece
+    const [isActive, setActive] = useState(false); 
+
 
     useFrame(() => {
       // Runs repeatedly every frame!
