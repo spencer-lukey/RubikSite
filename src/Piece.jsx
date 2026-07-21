@@ -6,7 +6,7 @@ import { useControls } from 'leva'
 import Sticker from './Sticker.jsx'
 
 
-function Piece({ posX, posY, posZ}) {
+function Piece({ posX, posY, posZ }) {
 
     // Returns a cube given inputs on position
     const boxRef = useRef();

@@ -28,11 +28,11 @@ function Cube() {
         <group name='allPieces' ref={allPiecesGroupRef}>
             {gridPositions.map((position, idx) => (
                 // Create new group of pieces with stickers:
-                <group name={`piece-${i}`} ref={AGHHHHHHH}>
+                <group name={`piece-${idx}`} >
                     <Piece key={`box-${idx}`} posX={position[0]} posY={position[1]} posZ={position[2]} />
-                    {position[0] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
-                    {position[1] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
-                    {position[2] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]}/> : null}
+                    {position[0] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]} posFactor={[0.05, 0, 0]}/> : null}
+                    {position[1] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]} posFactor={[0, 0.05, 0]}/> : null}
+                    {position[2] ? <Sticker key={id++} posX={position[0]} posY={position[1]} posZ={position[2]} posFactor={[0, 0, 0.05]}/> : null}
                 </group>
             ))}
         </group>
