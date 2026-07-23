@@ -6,7 +6,8 @@ import Sticker from './Sticker.jsx';
 function Cube() {
     // Create 27 piece objects in a cube shape of 3x3x3
     const pieceReferences = useRef([]); // Creates array of references for all 27 pieces
-    const allPiecesGroupRef = useRef();   
+    const allPiecesGroupRef = useRef(); 
+    const pivotRef = useRef();
     var gridPositions = [];
     var pieces = [];
     var id = 0;
@@ -46,6 +47,9 @@ function Cube() {
 
                 </group>
             ))}
+
+            {/* Empty group to be used for rotating pieces in a layer */}
+            <group name="pivotLayer" ref={pivotRef} />
 
         </group>
         
