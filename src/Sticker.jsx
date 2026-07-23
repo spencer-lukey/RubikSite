@@ -7,16 +7,23 @@ import { useControls } from 'leva'
 function Sticker({ posX, posY, posZ, posFactor}) {
     // TODO: Given position of the piece, determine what dimensions the sticker should have
     // ...
+
+
+    var color;
     function pickColor() {
-        const colors = ["red", "orange", "blue", "green", "white", "yellow"];
-        var idx = 0;
-        if (posFactor[0]) {
-            
-        } else if (posFactor[1]) {
+        
+      if (posFactor[0]) {
 
-        } else if (posFactor[2]) {
+        color = posX > 0 ? "red" : 0xff6600;
+      } else if (posFactor[1]) {
 
-        }
+        color = posY > 0 ? "blue" : "green";
+      } else if (posFactor[2]) {
+
+        color = posZ > 0 ? "white" : "yellow";
+      }
+      
+      return color;
     }
 
 

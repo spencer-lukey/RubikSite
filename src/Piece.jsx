@@ -29,7 +29,7 @@ function Piece({ posX, posY, posZ }) {
           console.log(key);
           setActive(!isActive)
         }}>
-        <boxGeometry args={[0.98, 0.98, 0.98]}/>
+        <boxGeometry args={[1, 1, 1]}/>
         <meshStandardMaterial color={isActive ? 'orange' : 	0x222222} /> 
       </mesh>
     )
