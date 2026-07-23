@@ -29,7 +29,9 @@ function Sticker({ posX, posY, posZ, posFactor}) {
 
 
     return (
-      <mesh position={[posX*(1 + posFactor[0]), posY*(1 + posFactor[1]), posZ*(1 + posFactor[2])]}>
+      <mesh 
+        position={[posX*posFactor[0], posY*posFactor[1], posZ*posFactor[2]]}
+      >
         <boxGeometry args={[0.9, 0.9, 0.9]}/>
         <meshStandardMaterial color={pickColor()} /> 
       </mesh>
